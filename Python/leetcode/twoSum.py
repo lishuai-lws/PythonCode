@@ -6,21 +6,21 @@
 #
 # 只会存在一个有效答案
 
-class Solution:
-    def twoSum( nums, target) :
-        for i in range(len(nums)):
-            for j in range(len(nums)):
-                # 同一个位置的数字不能使用两次，且和要等于target
-                if i != j and nums[i] + nums[j] == target:
-                    return [i, j]
+def twoSum( nums, target) :
+    for i in range(len(nums)):
+        for j in range(len(nums)):
+            # 同一个位置的数字不能使用两次，且和要等于target
+            if i != j and nums[i] + nums[j] == target:
+                return [i, j]
 
-# 输入字符串
-nums_str=input()
-# 转为int型列表
-nums = [int(x) for x in nums_str[1:-1].split(',')]
-# 输入target
-target = int(input())
-# 调用类方法
-result = Solution.twoSum(nums,target)
-# 输出结果
-print(result)
+if __name__ == '__main__ ':
+    # 输入字符串
+    nums_str=input()
+    # 转为int型列表
+    nums = [int(x) for x in nums_str[1:-1].split(',')]
+    # 输入target
+    target = int(input())
+    # 调用类方法
+    result = twoSum(nums,target)
+    # 输出结果
+    print(result)
