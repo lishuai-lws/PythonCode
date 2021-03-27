@@ -11,6 +11,8 @@ def Gary2Char(gray):
         return ' '
     else:
         return charSet[int(gray/((256.0+1)/len(charSet)))]
+# 将图片转为字符图片
+# 输入为文件路径，输出为字符图片的txt文件
 def Image2Char(imagePath):
     # 读取图片
     image = Image.open(imagePath)
