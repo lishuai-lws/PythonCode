@@ -54,6 +54,7 @@ if __name__ == '__main__':
 # regexp : string or None (optional) //使用正则表达式分隔输入的文本
 # collocations : bool, default=True //是否包括两个词的搭配
 # colormap : string or matplotlib colormap, default=”viridis” //给每个单词随机分配颜色，若指定color_func，则忽略该方法。
+
 # fit_words(frequencies) //根据词频生成词云【frequencies，为字典类型】
 # generate(text) //根据文本生成词云
 # generate_from_frequencies(frequencies[, ...]) //根据词频生成词云
@@ -62,6 +63,7 @@ if __name__ == '__main__':
 # recolor([random_state, color_func, colormap]) //对现有输出重新着色。重新上色会比重新生成整个词云快很多。
 # to_array() //转化为 numpy array
 # to_file(filename) //输出到文件
+
 # 简要讲下几个会影响图像清晰问题的WordCloud的参数：
 # mask：遮罩图，字的大小布局和颜色都会依据遮罩图生成。其实理论上这对字大小和清晰程度的影响不大，
 # 但是遮罩图色和背景色background_color如果易混淆，则可能是一个导致看起来不清晰的因素；
