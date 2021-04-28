@@ -2,21 +2,27 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import os
 import cv2
+import jieba 
 
 if __name__ == '__main__':
     # os.system('export DISPLAY=:0.0')
-    filename = "./txtfile/npuwiki.txt"
+    filename = "./txtfile/zl1.txt"
     # backgroundImage= plt.imread('./txtfile/npu.jpg')
     with open(filename,encoding='utf-8') as f:
         mytext = f.read()
-        # print(mytext)
-        wordcloud = WordCloud(width=800,height=400,background_color=None, mode="RGBA").generate(mytext)
-
+    # 分词
+    mytext = jieba.cut(mytext,cut_all=True)
+    mytext =' '.join(mytext)
+    # print(mytext)
+    # 字体样式，可以显示中文
+    font = r'C:\Windows\Fonts\simfang.ttf'
+    wordcloud = WordCloud(width=800,height=400,font_path=font).generate(mytext)
+    wordcloud.to_file('./txtfile/zl1.jpg')
 
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis("off")
 
-    plt.savefig('./txtfile/npuwiki.jpg')
+    plt.savefig('./txtfile/zl1.jpg')
     plt.show()
     print('词云已生成！')
 
