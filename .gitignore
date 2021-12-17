@@ -1,6 +1,3 @@
-HelloWorld/.idea
-HelloWorld/venv
-HelloWorld/HelloWorld/.idea
 leetcode/.idea
 Practice/.idea
 Practice/image
@@ -9,4 +6,6 @@ Practice/txtfile
 kaggle/.vscode
 kaggle/data
 .idea
-
+kaggle/.ipynb_checkpoints
+python_study/res.npy
+kaggle/Classify_Leaves/submission.csv
