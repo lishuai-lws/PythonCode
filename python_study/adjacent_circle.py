@@ -28,6 +28,11 @@ coords_labels = [[0.91*math.cos(i),0.91*math.sin(i)]for i in angles_labels]
 ax.pie(data,radius=1,labels=labels,colors=pie_color,wedgeprops=dict(width=0.1,edgecolor='black'))
 #画线及设置颜色
 reds = [0,6.5,3.3,2.2,1.6,1.2,1,0.8,0.65,0.55,0.45,0.35]
+for i in range(int(len(labels)/2)+1-len(reds)):
+    reds.append(0.1)
+# for i in range(len(labels)-len(reds)):
+#     reds.append(0.1)
+print('reds:',len(reds))
 lines_data = [round(random.uniform(0.5,1),2) for i in range(len(reds))]
 print(lines_data)
 # cm2 = mcol.LinearSegmentedColormap.from_list("LineCmap",['b','r'])
