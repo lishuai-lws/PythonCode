@@ -19,7 +19,8 @@ def pie_line_plot(datas,labels):
     angles_labels = [(i+0.5)*2*math.pi/len(labels) for i in range(len(labels))]
     coords_labels = [[0.91*math.cos(i),0.91*math.sin(i)]for i in angles_labels]
     #绘制圆环图
-    ax.pie(pie_data,radius=1,labels=labels,labeldistance=1,rotatelabels=True,colors=pie_color,textprops={'fontsize':8},wedgeprops=dict(width=0.1,edgecolor='black'))
+    ax.pie(pie_data,radius=1,labels=labels,labeldistance=1.05,rotatelabels=True,colors=pie_color,
+            textprops={'fontsize':5,'fontweight':'light','verticalalignment':'center','horizontalalignment':'center'},wedgeprops=dict(width=0.1,edgecolor='black'))
     #画线及设置颜色,目前只设置了12个距离，其他的距离
     reds = [0,6.5,3.3,2.2,1.6,1.2,1,0.8,0.65,0.55,0.45,0.35]
     for i in range(int(len(labels)/2)+1-len(reds)):
@@ -63,7 +64,8 @@ def pie_line_plot(datas,labels):
     #显示colorbar
     fig.colorbar(cpick2)
     #显示图片
-    plt.show()
+    # plt.show()
+    plt.savefig('pie_line_v2.pdf')
 
 if __name__ == "__main__":
     # 读取文件
